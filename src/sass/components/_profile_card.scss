@@ -1,0 +1,26 @@
+@use "../base/variables" as var;
+
+.profile-card {
+  display: flex;
+  gap: 3rem;
+  flex-direction: row !important;
+  align-items: flex-start;
+
+  h3 {
+    color: var.$green;
+    font-weight: 600;
+  }
+
+  &__info {
+    .dev-name {
+      font-weight: 600 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-card {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}

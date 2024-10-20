@@ -1,0 +1,13 @@
+@use "../abstracts/mixins" as mix;
+
+.grid-decoration {
+  &__left {
+    top: 10rem;
+    @include mix.decoration-position("left");
+  }
+
+  &__right {
+    top: 20rem;
+    @include mix.decoration-position("right");
+  }
+}

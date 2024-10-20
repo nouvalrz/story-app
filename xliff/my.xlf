@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+  xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file target-language="my" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+    <body>
+      <trans-unit id="sa597982e46a96c4b">
+        <source>Menus</source>
+        <target>Menu</target>
+      </trans-unit>
+      <trans-unit id="s6abb1cd87fe0114e">
+        <source>Home</source>
+        <target>Rumah</target>
+      </trans-unit>
+      <trans-unit id="s0487f33d9ddaabde">
+        <source>About</source>
+        <target>Tentang</target>
+
+      </trans-unit>
+      <trans-unit id="s945ddf7c0d6a21d7">
+        <source>Welcome, </source>
+        <target>Selamat Datang, </target>
+
+      </trans-unit>
+      <trans-unit id="s35fa73c2220cc279">
+        <source>Scroll to explore the world.</source>
+        <target>Tatal untuk meneroka dunia.</target>
+
+      </trans-unit>
+      <trans-unit id="saf63d34c8601dd41">
+        <source>
+          <x id="0" equiv-text="${this.title}"/>
+        </source>
+      </trans-unit>
+      <trans-unit id="s6625eabd46a02f84">
+        <source>The Creator</source>
+        <target>Sang Pembuat</target>
+
+      </trans-unit>
+      <trans-unit id="sd3806ff253ec2d79">
+        <source>Nouval Rizky, someone who aspires to be a frontend developer.</source>
+        <target>Nouval Rizky, seseorang yang bercita-cita untuk menjadi pembangun bahagian hadapan.</target>
+
+      </trans-unit>
+      <trans-unit id="s78d60a97137f0946">
+        <source>Social Media</source>
+        <target>Media Sosial</target>
+
+      </trans-unit>
+      <trans-unit id="sf9aee319a006c9b4">
+        <source>Add</source>
+        <target>Tambah</target>
+
+      </trans-unit>
+      <trans-unit id="s04ae2813e8c5edf2">
+        <source>Story</source>
+        <target>Cerita</target>
+
+      </trans-unit>
+      <trans-unit id="s63d894b1ddb06289">
+        <source>Description</source>
+        <target>Penerangan</target>
+      </trans-unit>
+      <trans-unit id="scd8a3e0f249b0253">
+        <source>Copyright 2024. All right reserved</source>
+        <target>Hak Cipta 2024. Hak cipta terpelihara</target>
+
+      </trans-unit>
+      <trans-unit id="s924de3afe23de7e2">
+        <source>Upload your image</source>
+        <target>Muat naik imej Anda</target>
+
+      </trans-unit>
+      <trans-unit id="sb8b69f1e45c72361">
+        <source>Upload Story</source>
+        <target>Muat naik cerita</target>
+
+      </trans-unit>
+      <trans-unit id="s1f30f2eaf1e38fb9">
+        <source>Add Story</source>
+        <target>Tambah Cerita</target>
+      </trans-unit>
+      <trans-unit id="se957aac89298c890">
+        <source>About Me</source>
+        <target>Tentang Saya</target>
+
+      </trans-unit>
+      <trans-unit id="s23ab59d5498b1b10">
+        <source>a passionate Full Stack Software Engineer with a strong focus on creating scalable, efficient, and user-friendly web and mobile applications. With a solid foundation in technologies like Ruby on Rails, Flutter, JavaScript, and PostgreSQL, I thrive in solving complex problems and building robust solutions that enhance user experiences.</source>
+        <target>Jurutera Perisian Full Stack yang bersemangat dengan tumpuan yang kuat untuk mencipta aplikasi web dan mudah alih yang boleh skala, cekap dan mesra pengguna. Dengan asas kukuh dalam teknologi seperti Ruby on Rails, Flutter, JavaScript dan PostgreSQL, saya berkembang maju dalam menyelesaikan masalah yang kompleks dan membina penyelesaian teguh yang meningkatkan pengalaman pengguna.</target>
+
+      </trans-unit>
+      <trans-unit id="s1211236f7d74e321">
+        <source>I am a graduate in Information Technology from Universitas Udayana, and over the years, I have honed my skills working on diverse projects, ranging from backend systems to modern frontend designs. My expertise lies in full stack development, ensuring smooth integration between front-end and back-end systems, all while maintaining code quality and efficiency.</source>
+        <target>Saya seorang graduan dalam Teknologi Maklumat dari Universitas Udayana, dan selama ini, saya telah mengasah kemahiran saya bekerja pada pelbagai projek, daripada sistem bahagian belakang hingga reka bentuk bahagian hadapan moden. Kepakaran saya terletak pada pembangunan timbunan penuh, memastikan penyepaduan yang lancar antara sistem hadapan dan belakang, sambil mengekalkan kualiti dan kecekapan kod.</target>
+      </trans-unit>
+      <trans-unit id="s17e14ccbdcb853e3">
+        <source>Must be filled</source>
+        <target>Mesti diisi</target>
+
+      </trans-unit>
+      <trans-unit id="s2529ab4801d05dc8">
+        <source>Image is valid</source>
+        <target>Imej adalah sah</target>
+
+      </trans-unit>
+      <trans-unit id="s771804696dd2d578">
+        <source>Value is valid</source>
+        <target>Value adalah sah</target>
+
+      </trans-unit>
+      <trans-unit id="s4916b8ebdd6a846f">
+        <source>Hello! My name is </source>
+        <target>Halo! nama saya </target>
+
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

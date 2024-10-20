@@ -1,0 +1,10 @@
+@mixin decoration-position($position: "left") {
+  position: fixed;
+  z-index: -5;
+
+  @if $position == "right" {
+    right: 0;
+  } @else if $position == "left" {
+    left: 0;
+  }
+}

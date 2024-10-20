@@ -1,0 +1,8 @@
+@use "../../../base/variables" as var;
+
+$theme-colors: (
+  "green": var.$green,
+  "dark": var.$dark,
+  "secondary": var.$secondary,
+  "lightgreen": var.$lightgreen,
+);
