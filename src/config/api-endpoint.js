@@ -6,6 +6,7 @@ const ApiEndpoint = {
 
   GET_ALL_STORIES: `${Config.BASE_URL}/stories`,
   STORE_STORY: `${Config.BASE_URL}/stories`,
+  GET_STORY_BY_ID: (id) => `${Config.BASE_URL}/stories/${id}`,
 };
 
 export default ApiEndpoint;

@@ -12,6 +12,17 @@ class AppUtils {
 
     return dateParsed.toLocaleDateString(locale, options);
   }
+
+  static setUserToken(key, value) {
+    return sessionStorage.setItem(key, value);
+  }
+
+  static getUserToken(key) {
+    return sessionStorage.getItem(key);
+  }
+  static destroyUserToken(key) {
+    return sessionStorage.removeItem(key);
+  }
 }
 
 export default AppUtils;
