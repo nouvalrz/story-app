@@ -1,6 +1,6 @@
 import { html } from "lit";
 import LitWithoutShadowDom from "../base/LitWithoutShadowDom";
-import { msg, str, updateWhenLocaleChanges } from "@lit/localize";
+import { msg, updateWhenLocaleChanges } from "@lit/localize";
 
 class StoryForm extends LitWithoutShadowDom {
   constructor() {

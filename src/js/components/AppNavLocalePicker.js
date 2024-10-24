@@ -1,6 +1,5 @@
-import { css, html } from "lit";
+import { html } from "lit";
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
-import { allLocales } from "../../generated/locale-codes";
 import { getLocale, localeNames, setLocaleFromUrl } from "../localization.js";
 
 class AppNavLocalePicker extends LitWithoutShadowDom {

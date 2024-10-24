@@ -1,5 +1,5 @@
 import { css, html, LitElement } from "lit";
-import { msg, str, updateWhenLocaleChanges } from "@lit/localize";
+import { msg, updateWhenLocaleChanges } from "@lit/localize";
 
 class AppGreeting extends LitElement {
   static properties = {

@@ -1,5 +1,5 @@
 import { html, css, LitElement } from "lit";
-import { msg, str, updateWhenLocaleChanges } from "@lit/localize";
+import { msg, updateWhenLocaleChanges } from "@lit/localize";
 
 class AppFooter extends LitElement {
   static styles = css`
@@ -73,7 +73,7 @@ class AppFooter extends LitElement {
               <h3>${msg("The Creator")}</h3>
               <p>
                 ${msg(
-                  "Nouval Rizky, someone who aspires to be a frontend developer."
+                  "Nouval Rizky, someone who aspires to be a frontend developer.",
                 )}
               </p>
             </div>

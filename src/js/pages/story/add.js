@@ -15,7 +15,7 @@ const Add = {
 
         addStoryForm.classList.add("was-validated");
       },
-      false
+      false,
     );
   },
 };

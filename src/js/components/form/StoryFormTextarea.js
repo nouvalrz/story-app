@@ -1,6 +1,6 @@
 import LitWithoutShadowDom from "../base/LitWithoutShadowDom";
 import { html } from "lit";
-import { msg, str, updateWhenLocaleChanges } from "@lit/localize";
+import { msg } from "@lit/localize";
 
 class StoryFormTextarea extends LitWithoutShadowDom {
   static properties = {

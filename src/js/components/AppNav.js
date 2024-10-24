@@ -1,6 +1,6 @@
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
-import { html, css } from "lit";
-import { msg, str, updateWhenLocaleChanges } from "@lit/localize";
+import { html } from "lit";
+import { msg, updateWhenLocaleChanges } from "@lit/localize";
 import { getLocale } from "../localization.js";
 
 class AppNav extends LitWithoutShadowDom {

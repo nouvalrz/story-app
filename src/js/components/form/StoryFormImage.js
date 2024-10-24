@@ -1,6 +1,6 @@
-import { html, nothing } from "lit";
+import { html } from "lit";
 import LitWithoutShadowDom from "../base/LitWithoutShadowDom";
-import { msg, str, updateWhenLocaleChanges } from "@lit/localize";
+import { msg, updateWhenLocaleChanges } from "@lit/localize";
 
 class StoryFormImage extends LitWithoutShadowDom {
   static properties = {
@@ -36,7 +36,7 @@ class StoryFormImage extends LitWithoutShadowDom {
     const storyImageInput = document.querySelector("#storyImageInput");
     const storyImagePreview = document.querySelector("#storyImagePreview");
     const storyImagePlaceholder = document.querySelector(
-      "#storyImagePlaceholder"
+      "#storyImagePlaceholder",
     );
 
     const image = storyImageInput.files[0];

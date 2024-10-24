@@ -1,6 +1,5 @@
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
 import { html } from "lit";
-import { msg, str } from "@lit/localize";
 
 import AppUtils from "../utils/app-utils";
 
@@ -46,7 +45,7 @@ class StoryCard extends LitWithoutShadowDom {
 
   _imageLoaded() {
     document.getElementById(
-      `story-image-placeholder-${this.photoUrl}`
+      `story-image-placeholder-${this.photoUrl}`,
     ).style.display = "none";
     document
       .getElementById(`story-image-${this.photoUrl}`)

@@ -6,7 +6,7 @@ class StoryCards extends LitWithoutShadowDom {
     stories: {
       type: Array,
       reflect: true,
-      converter: (value, type) => {
+      converter: (value) => {
         return JSON.parse(value);
       },
     },
@@ -29,7 +29,7 @@ class StoryCards extends LitWithoutShadowDom {
               description="${story.description}"
               photo-url="${story.photoUrl}"
               created-at="${story.createdAt}"
-            ></story-card>`
+            ></story-card>`,
         )}
       </div>
     `;

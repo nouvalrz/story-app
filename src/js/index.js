@@ -1,4 +1,5 @@
 // Import our custom CSS
+// eslint-disable-next-line no-unused-vars
 import * as bootstrap from "bootstrap";
 import "../sass/main.scss";
 import "./components/index";
