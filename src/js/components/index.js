@@ -11,3 +11,8 @@ import "./AppProfileCard";
 import "./form/StoryForm";
 import "./form/StoryFormImage";
 import "./form/StoryFormTextarea";
+
+import "./form/StoryFormRegister";
+import "./form/StoryFormLogin";
+
+import "./input/AppTextInput";
