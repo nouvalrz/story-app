@@ -6,7 +6,6 @@ import { getLocale } from "../../localization";
 class StoryFormLogin extends LitWithoutShadowDom {
   constructor() {
     super();
-
     updateWhenLocaleChanges(this);
   }
   render() {
