@@ -1,6 +1,5 @@
 import LitWithoutShadowDom from "../base/LitWithoutShadowDom";
 import { html } from "lit";
-import { msg } from "@lit/localize";
 
 class StoryFormTextarea extends LitWithoutShadowDom {
   static properties = {
@@ -8,13 +7,10 @@ class StoryFormTextarea extends LitWithoutShadowDom {
       type: String,
       reflect: true,
     },
-    validFeedbackMessage: {
-      type: String,
-      reflect: true,
-    },
     invalidFeedbackMessage: {
       type: String,
       reflect: true,
+      attribute: "invalid-feedback-message",
     },
     required: { type: Boolean, reflect: true },
   };
@@ -23,8 +19,7 @@ class StoryFormTextarea extends LitWithoutShadowDom {
     super();
     this.label = "textarea";
     this.required = true;
-    this.invalidFeedbackMessage = msg("Must be filled");
-    this.validFeedbackMessage = msg("Value is valid");
+    this.invalidFeedbackMessage = "";
   }
 
   render() {
@@ -38,7 +33,6 @@ class StoryFormTextarea extends LitWithoutShadowDom {
           placeholder="${this.label}"
         ></textarea>
         <label for="story-${this.label}-input">${this.label}</label>
-        <div class="valid-feedback">${this.validFeedbackMessage}</div>
         <div class="invalid-feedback">${this.invalidFeedbackMessage}</div>
       </div>
     `;

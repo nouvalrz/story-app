@@ -40,6 +40,7 @@
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.10.2",
-    "lit": "^2.8.0"
+    "lit": "^2.8.0",
+    "sweetalert2": "^11.14.4"
   }
 }

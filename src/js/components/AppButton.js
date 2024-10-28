@@ -34,6 +34,10 @@ class AppButton extends LitWithoutShadowDom {
       type: String,
       reflect: true,
     },
+    loading: {
+      type: Boolean,
+      reflect: true,
+    },
   };
 
   constructor() {
@@ -46,6 +50,7 @@ class AppButton extends LitWithoutShadowDom {
     this.textColor = "text-white";
     this.type = "button";
     this.class = "";
+    this.loading = false;
 
     updateWhenLocaleChanges(this);
   }
@@ -53,6 +58,7 @@ class AppButton extends LitWithoutShadowDom {
   render() {
     return html`
       <button
+        ?disabled="${this.loading}"
         type="${this.type}"
         class="btn ${this.outline
           ? `btn-outline-${this.color}`
@@ -60,10 +66,29 @@ class AppButton extends LitWithoutShadowDom {
           ${this.textColor} 
           ${this.class ? this.class : ""}"
       >
-        ${this.iconClass
-          ? html`<i class="${this.iconClass}"></i>`
-          : nothing}${msg(str`${this.title}`)}
+        ${this.loading
+          ? this._renderLoadingContent()
+          : this._renderRegularContent()}
       </button>
+    `;
+  }
+
+  _renderRegularContent() {
+    return html`
+      ${this.iconClass
+        ? html`<i class="${this.iconClass}"></i>`
+        : nothing}${msg(str`${this.title}`)}
+    `;
+  }
+
+  _renderLoadingContent() {
+    return html`
+      <span
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+      ></span>
+      Loading...
     `;
   }
 }

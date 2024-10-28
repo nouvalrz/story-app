@@ -1,12 +1,30 @@
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
-import { html } from "lit";
+import { html, nothing } from "lit";
 import { msg, updateWhenLocaleChanges } from "@lit/localize";
 import { getLocale } from "../localization.js";
+import AppUtils from "../utils/app-utils.js";
+import Config from "../config/config.js";
+import CheckAuth from "../utils/check-auth.js";
 
 class AppNav extends LitWithoutShadowDom {
+  static properties = {
+    logged: {
+      type: Boolean,
+    },
+  };
+
   constructor() {
     super();
+    this.logged = false;
     updateWhenLocaleChanges(this);
+    this.username = AppUtils.getUserToken(Config.USER_ACCOUNT_NAME);
+  }
+
+  _userLogOut(event) {
+    event.preventDefault();
+    AppUtils.destroyUserToken(Config.USER_TOKEN_KEY);
+    AppUtils.destroyUserToken(Config.USER_ACCOUNT_NAME);
+    CheckAuth.checkLoginState();
   }
 
   render() {
@@ -63,8 +81,40 @@ class AppNav extends LitWithoutShadowDom {
                   >
                 </li>
                 <app-nav-locale-picker></app-nav-locale-picker>
+                ${this.logged
+                  ? html`<li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle text-nowrap"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                      >
+                        <div class="me-2 d-inline-block">
+                          <img
+                            id="imgUserLogged"
+                            style="width: 30px;height: 30px"
+                            class="img-fluid rounded-pill"
+                            src="https://ui-avatars.com/api/?name=${encodeURIComponent(
+                              this.username,
+                            )}&background=188e3b&color=fff"
+                            alt="User Name"
+                          />
+                        </div>
+                        <span id="nameUserLogged"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <a
+                          class="dropdown-item"
+                          id="userLogOut"
+                          @click=${this._userLogOut}
+                        >
+                          ${msg(`Logout`)}
+                        </a>
+                      </ul>
+                    </li>`
+                  : nothing}
                 <li class="nav-item">
-                  ${window.location.pathname != "/story/add.html"
+                  ${this.logged
                     ? html`<a href="/story/add.html?lang=${getLocale()}">
                         <app-button
                           color="green"

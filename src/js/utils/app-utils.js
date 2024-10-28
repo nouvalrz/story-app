@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 class AppUtils {
   static formatDate(date, locale = "en") {
     console.log(date);
@@ -23,6 +25,28 @@ class AppUtils {
   static destroyUserToken(key) {
     return sessionStorage.removeItem(key);
   }
+
+  static getFormData(...args) {
+    const results = {};
+
+    args.forEach((item) => {
+      const element = document.querySelector(item.query);
+      results[item.name] = element.value;
+    });
+    return results;
+  }
+
+  static validateFormData(formData) {
+    const formDataFiltered = Object.values(formData).filter(
+      (item) => item === "",
+    );
+
+    return formDataFiltered.length === 0;
+  }
+
+  static Popup = Swal.mixin({
+    confirmButtonColor: "#188e3b",
+  });
 }
 
 export default AppUtils;

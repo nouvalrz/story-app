@@ -97,19 +97,68 @@
         <target>Harus diisi</target>
 
       </trans-unit>
-      <trans-unit id="s2529ab4801d05dc8">
-        <source>Image is valid</source>
-        <target>Gambar valid</target>
-
-      </trans-unit>
-      <trans-unit id="s771804696dd2d578">
-        <source>Value is valid</source>
-        <target>Data valid</target>
-
-      </trans-unit>
       <trans-unit id="s4916b8ebdd6a846f">
         <source>Hello! My name is </source>
         <target>Halo! nama saya </target>
+
+      </trans-unit>
+      <trans-unit id="s67749057edb2586b">
+        <source>Logout</source>
+        <target>Keluar</target>
+      </trans-unit>
+      <trans-unit id="sfc82ef7cbfbe5639">
+        <source> new acccount</source>
+        <target> akun baru</target>
+
+      </trans-unit>
+      <trans-unit id="sef49aec68fd1dc66">
+        <source>Name</source>
+        <target>Nama</target>
+
+      </trans-unit>
+      <trans-unit id="sa9d1dd5d6142477d">
+        <source>Your name</source>
+        <target>Nama Anda</target>
+
+      </trans-unit>
+      <trans-unit id="s7872788250ee26b7">
+        <source>Provide a valid email</source>
+        <target>Berikan email yang valid</target>
+
+      </trans-unit>
+      <trans-unit id="sf6e1665c7022a1f8">
+        <source>Password</source>
+        <target>Kata Sandi</target>
+
+      </trans-unit>
+      <trans-unit id="s40b0f4689effa8b8">
+        <source>Fill with strong password</source>
+        <target>Isikan dengan kata sandi yang kuat</target>
+
+      </trans-unit>
+      <trans-unit id="s548c7694414e1e09">
+        <source>Minimum 8 characters</source>
+        <target>Minimal 8 karakter</target>
+
+      </trans-unit>
+      <trans-unit id="s374b7ba47861c79a">
+        <source>Have an account?</source>
+        <target>Sudah punya akun?</target>
+
+      </trans-unit>
+      <trans-unit id="sd522417dfaf830fe">
+        <source> to your account</source>
+        <target> ke akun anda</target>
+
+      </trans-unit>
+      <trans-unit id="s725969f0ea4b66a3">
+        <source>Your password</source>
+        <target>Kata Sandi anda</target>
+
+      </trans-unit>
+      <trans-unit id="sdb314e7e0f343d2d">
+        <source>Dont have an account?</source>
+        <target>Tidak punya akun?</target>
 
       </trans-unit>
     </body>

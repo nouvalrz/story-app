@@ -1,18 +1,20 @@
-import StoriesApi from "../../data/remote/stories_api";
-import { setLocaleFromUrl } from "../../localization";
 import AppUtils from "../../utils/app-utils";
-const Add = {
+import AuthApi from "../../data/remote/auth_api";
+import Config from "../../config/config";
+import { setLocaleFromUrl } from "../../localization";
+
+const Login = {
   async init() {
-    this._initListener();
+    this._initialHandler();
     setLocaleFromUrl();
   },
 
-  _initListener() {
-    const addStoryForm = document.querySelector("#addStoryForm");
-    addStoryForm.addEventListener("submit", this._sendStory.bind(this), false);
+  _initialHandler() {
+    const loginForm = document.querySelector("#loginForm");
+    loginForm.addEventListener("submit", this._sendLogin.bind(this), false);
   },
 
-  async _sendStory(event) {
+  async _sendLogin(event) {
     event.preventDefault();
     event.stopPropagation();
 
@@ -21,16 +23,28 @@ const Add = {
     const formData = this._getFormData();
 
     if (AppUtils.validateFormData({ ...formData })) {
+      if (formData.password.length < 8) {
+        return;
+      }
       const button = event.target.querySelector("app-button");
       button.setAttribute("loading", "");
       try {
-        await StoriesApi.store(formData);
+        const response = await AuthApi.login(formData);
+        AppUtils.setUserToken(
+          Config.USER_TOKEN_KEY,
+          response.data.loginResult.token,
+        );
+
+        AppUtils.setUserToken(
+          Config.USER_ACCOUNT_NAME,
+          response.data.loginResult.name,
+        );
 
         AppUtils.Popup.fire({
           title: "Success",
-          text: "Succeed post new story",
+          text: `Welcome, ${response.data.loginResult.name}`,
           icon: "success",
-          confirmButtonText: "Go to home",
+          confirmButtonText: "Go to Home",
         }).then((result) => {
           if (result.isConfirmed) {
             this._goToHomePage();
@@ -55,14 +69,10 @@ const Add = {
   },
 
   _getFormData() {
-    const imageInput = document.querySelector("#storyImageInput");
-    return {
-      photo: imageInput.files[0],
-      ...AppUtils.getFormData({
-        name: "description",
-        query: "#story-Description-input",
-      }),
-    };
+    return AppUtils.getFormData(
+      { name: "email", query: "#login-email" },
+      { name: "password", query: "#login-password" },
+    );
   },
 
   _goToHomePage() {
@@ -70,4 +80,4 @@ const Add = {
   },
 };
 
-export default Add;
+export default Login;

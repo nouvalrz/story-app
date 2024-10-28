@@ -12,13 +12,10 @@ class StoryFormImage extends LitWithoutShadowDom {
       type: String,
       reflect: true,
     },
-    validFeedbackMessage: {
-      type: String,
-      reflect: true,
-    },
     invalidFeedbackMessage: {
       type: String,
       reflect: true,
+      attribute: "invalid-feedback-message",
     },
   };
 
@@ -26,8 +23,7 @@ class StoryFormImage extends LitWithoutShadowDom {
     super();
     this.required = true;
     this.imageSource = "";
-    this.invalidFeedbackMessage = msg("Must be filled");
-    this.validFeedbackMessage = msg("Image is valid");
+    this.invalidFeedbackMessage = "";
 
     updateWhenLocaleChanges(this);
   }
@@ -89,7 +85,6 @@ class StoryFormImage extends LitWithoutShadowDom {
           ?required="${this.required}"
           @change=${this._imageChangeHandler}
         />
-        <div class="valid-feedback">${this.validFeedbackMessage}</div>
         <div class="invalid-feedback">${this.invalidFeedbackMessage}</div>
       </div>
     `;

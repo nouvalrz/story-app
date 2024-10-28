@@ -7,11 +7,16 @@ import "./components/index";
 import Home from "./pages/home";
 import Add from "./pages/story/add";
 import About from "./pages/about";
+import Register from "./pages/auth/register";
+import Login from "./pages/auth/login";
+import CheckAuth from "./utils/check-auth";
 
 const routes = {
   "/": Home,
   "/about.html": About,
   "/story/add.html": Add,
+  "/register.html": Register,
+  "/login.html": Login,
 };
 
 const detectRoute = () => routes[window.location.pathname];
@@ -28,6 +33,8 @@ const detectRoute = () => routes[window.location.pathname];
 
 window.addEventListener("DOMContentLoaded", async () => {
   // initPages();
+
+  CheckAuth.checkLoginState();
 
   const route = detectRoute();
   console.log(route);

@@ -1,4 +1,7 @@
+import Config from "../config/config";
+import StoriesApi from "../data/remote/stories_api";
 import { setLocaleFromUrl } from "../localization";
+import AppUtils from "../utils/app-utils";
 const Home = {
   async init() {
     await this._initialData();
@@ -7,12 +10,19 @@ const Home = {
 
   async _initialData() {
     try {
-      const storiesResponse = await fetch("/data/DATA.json");
-      const storiesJson = await storiesResponse.json();
+      const response = await StoriesApi.getAll();
 
-      this._populateStoriesToCards(storiesJson["listStory"]);
+      this._populateStoriesToCards(response.data.listStory);
+
+      const accountName = AppUtils.getUserToken(Config.USER_ACCOUNT_NAME);
+      const appGreeting = document.querySelector("app-greeting");
+      appGreeting.setAttribute("name", accountName);
     } catch (e) {
-      alert(e);
+      AppUtils.Popup.fire({
+        title: "Error",
+        text: e.response.data.message,
+        icon: "error",
+      });
     }
   },
 

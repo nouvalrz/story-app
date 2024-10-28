@@ -23,9 +23,12 @@ class StoryForm extends LitWithoutShadowDom {
                     </h3>
                   </div>
                   <div class="card__body">
-                    <story-form-image></story-form-image>
+                    <story-form-image
+                      invalid-feedback-message="${msg("Must be filled")}"
+                    ></story-form-image>
                     <story-form-textarea
                       label="${msg("Description")}"
+                      invalid-feedback-message="${msg("Must be filled")}"
                     ></story-form-textarea>
                     <app-button
                       type="submit"

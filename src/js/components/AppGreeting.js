@@ -25,6 +25,7 @@ class AppGreeting extends LitElement {
 
   constructor() {
     super();
+    this.name = "";
     updateWhenLocaleChanges(this);
   }
   render() {

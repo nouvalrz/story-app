@@ -7,7 +7,7 @@ module.exports = merge(common, {
   mode: "development",
   devServer: {
     allowedHosts: "all",
-    port: 7000,
+    port: 7001,
     static: {
       directory: path.resolve(__dirname, "dist"),
     },
